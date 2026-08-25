@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        table, tr, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table class="container">
+        <tr>
+            <th>S. No.</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Can Vote?</th>
+        </tr>
+        {% for i in people %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+            <td>
+                {% if i.age >= 18 %}
+                👍
+                {% else %}
+                👎
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <script>
+        console.log('Wanna have fun?')
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+# === Django & Python Core ===
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.cfg
+.pytest_cache/
+
+# === Environments & Dependencies ===
+myenv/
+dist/
+build/
+*.egg-info/
+.installed.cfg
+.pip-deps
+
+# === Databases & Local Storage ===
+# Keep your local development database out of production repository
+db.sqlite3
+db.sqlite3-journal
+
+# === Media & Uploads ===
+# Exclude user-uploaded assets in development
+/*/media/
+/*/static/collected/
+
+# === Secrets & Environment Variables ===
+# Never commit your private keys or database passwords
+.env
+.secrets
+secrets.json
+
+# === OS & IDE Metadata ===
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
