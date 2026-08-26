@@ -9,3 +9,7 @@ def home(request):
 
 def success_page(request):
     return render(request, "index.html")
+
+def contact(request):
+    contact_info = {'Name' : 'Bhaumik Yadav', 'Contact' : '+918802342229', 'Email-ID' : 'superbhaumik@gmail.com'}
+    return render(request, "contact.html", context={'contact_info' : contact_info})

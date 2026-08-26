@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Success Page Rendering</title>
-</head>
-<body>
-    <a href='https://bhaumik-yadav.vercel.app/'>Click Here</a>
-    <script>
-        console.log('Wanna have fun?')
-    </script>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Action Complete{% endblock %}
+
+{% block content %}
+    <div style="background-color: white; padding: 40px; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; max-width: 500px; margin: 40px auto; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+        <div style="width: 56px; height: 56px; background-color: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+            <span style="color: #16a34a; font-size: 24px; font-weight: bold;">✓</span>
+        </div>
+        <h2 style="color: #0f172a; margin-bottom: 10px;">Process Completed Successfully</h2>
+        <a href="https://bhaumik-yadav.vercel.app/" style="color: #64748b; font-size: 14px; margin-bottom: 24px;">Click here to know about dev</p>
+        <a href="{% url 'home' %}" style="display: inline-block; background-color: #1e293b; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-size: 14px;">Return to Dashboard</a>
+    </div>
+{% endblock %}
